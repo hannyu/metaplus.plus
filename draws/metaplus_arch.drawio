@@ -1,1 +1,34 @@
-<mxfile host="app.diagrams.net" modified="2025-02-14T03:34:03.786Z" agent="5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/130.0.0.0 Safari/537.36" version="20.5.3" etag="XukTCbQjYlbKxsDvb7f6" type="github"><diagram id="E0sbPKpr6EtNSLVrte5P">UzV2zq1wL0osyPDNT0nNUTV2VTV2LsrPL4GwciucU3NyVI0MMlNUjV1UjYwMgFjVyA2HrCFY1qAgsSg1rwSLBiADYTaQg2Y1AA==</diagram></mxfile>
+<mxfile host="app.diagrams.net" agent="Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/130.0.0.0 Safari/537.36" version="26.0.13">
+  <diagram id="E0sbPKpr6EtNSLVrte5P" name="第 1 页">
+    <mxGraphModel dx="1242" dy="700" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="nCjDm3AomcOI2oHdxiP1-4" value="" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="40" y="60" width="260" height="160" as="geometry" />
+        </mxCell>
+        <mxCell id="nCjDm3AomcOI2oHdxiP1-1" value="HiveServer2" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="60" y="160" width="100" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="nCjDm3AomcOI2oHdxiP1-2" value="MetaStore" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="180" y="160" width="100" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="nCjDm3AomcOI2oHdxiP1-6" value="HDFS" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="60" y="100" width="220" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="nCjDm3AomcOI2oHdxiP1-7" value="Hadoop" style="text;html=1;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=14;" vertex="1" parent="1">
+          <mxGeometry x="60" y="64" width="60" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="nCjDm3AomcOI2oHdxiP1-8" value="ClickHouse" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="340" y="160" width="120" height="50" as="geometry" />
+        </mxCell>
+        <mxCell id="nCjDm3AomcOI2oHdxiP1-9" value="Doris / StarRocks" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="340" y="80" width="120" height="50" as="geometry" />
+        </mxCell>
+        <mxCell id="nCjDm3AomcOI2oHdxiP1-10" value="ClickHouse" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="490" y="160" width="120" height="50" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>
