@@ -13,15 +13,13 @@ require(['gitbook', 'jquery'], function(gitbook, $) {
     			newUrl = window.location.pathname.replace('/cn/', '/en/');
     		}
     	} else {
-    		text = '中文';
+    		text = '简体中文';
     		if (window.location.pathname.startsWith('/en/')) {
     			newUrl = window.location.pathname.replace('/en/', '/cn/');
     		} else {
     			newUrl = '/cn/';
     		}
     	}
-
-    	console.log("wwwwwww : " + newUrl);
 
         gitbook.toolbar.createButton({
             icon: 'fa',

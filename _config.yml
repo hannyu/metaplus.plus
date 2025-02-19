@@ -13,6 +13,12 @@ url:              'https://metaplus.plus'
 baseurl:          ''
 rss:              RSS
 
+# metaplus
+github_repository: hannyu/metaplus
+twitter_username: hannyu
+weixin_username: hannyu
+
+
 # bootstrap: use the remote theme for the site itself
 remote_theme: sighingnow/jekyll-gitbook
 
