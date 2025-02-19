@@ -36,8 +36,12 @@
             {% else %}
             <li class="chapter" data-level="1.1" data-path="{{site.baseurl}}">
             {% endif %}
+                {% if page.url contains "/cn/" %}
+                <a href="{{site.baseurl}}/cn/" onclick="pageScrollToTop(this)">
+                {% else %}
                 <a href="{{site.baseurl}}/" onclick="pageScrollToTop(this)">
-                    {{ site.title | escape }}
+                {% endif %}
+                    kk-{{ site.title | escape }}
                 </a>
                 {% if site.toc.enabled %}
                     {% if site.toc.enabled_index %}
@@ -60,20 +64,41 @@
                         {% endif %}
 
                         {% for post in reversed_posts %}
-                            {% if page.url == post.url %}
-                            <li class="chapter active" data-level="1.2" data-path="{{site.baseurl}}{{post.url}}">
-                            {% else %}
-                            <li class="chapter" data-level="1.1" data-path="{{site.baseurl}}{{post.url}}">
-                            {% endif %}
-                                <a href="{{site.baseurl}}{{post.url}}" onclick="pageScrollToTop(this)">
-                                    {{ post.title | escape }}
-                                </a>
-                                {% if site.toc.enabled %}
+                            {% if page.url contains "/cn/" %}
+                                {% if post.url contains "/cn/" %}
                                     {% if page.url == post.url %}
-                                        {% include toc.html html=content h_min=site.toc.h_min h_max=site.toc.h_max %}
+                                    <li class="chapter active" data-level="1.2" data-path="{{site.baseurl}}{{post.url}}">
+                                    {% else %}
+                                    <li class="chapter" data-level="1.1" data-path="{{site.baseurl}}{{post.url}}">
                                     {% endif %}
+                                        <a href="{{site.baseurl}}{{post.url}}" onclick="pageScrollToTop(this)">
+                                            {{ post.title | escape }}
+                                        </a>
+                                        {% if site.toc.enabled %}
+                                            {% if page.url == post.url %}
+                                                {% include toc.html html=content h_min=site.toc.h_min h_max=site.toc.h_max %}
+                                            {% endif %}
+                                        {% endif %}
+                                    </li>
                                 {% endif %}
-                            </li>
+                            {% else %}
+                                {% if post.url contains "/en/" %}
+                                    {% if page.url == post.url %}
+                                    <li class="chapter active" data-level="1.2" data-path="{{site.baseurl}}{{post.url}}">
+                                    {% else %}
+                                    <li class="chapter" data-level="1.1" data-path="{{site.baseurl}}{{post.url}}">
+                                    {% endif %}
+                                        <a href="{{site.baseurl}}{{post.url}}" onclick="pageScrollToTop(this)">
+                                            {{ post.title | escape }}
+                                        </a>
+                                        {% if site.toc.enabled %}
+                                            {% if page.url == post.url %}
+                                                {% include toc.html html=content h_min=site.toc.h_min h_max=site.toc.h_max %}
+                                            {% endif %}
+                                        {% endif %}
+                                    </li>
+                                {% endif %}
+                            {% endif %}
                         {% endfor %}
 
                         {% if reversed_posts.size > 0 %}
@@ -92,20 +117,22 @@
                         {% endif %}
 
                         {% for post in reversed_posts %}
-                            {% if page.url == post.url %}
-                            <li class="chapter active" data-level="1.2" data-path="{{site.baseurl}}{{post.url}}">
-                            {% else %}
-                            <li class="chapter" data-level="1.1" data-path="{{site.baseurl}}{{post.url}}">
-                            {% endif %}
-                                <a href="{{site.baseurl}}{{post.url}}" onclick="pageScrollToTop(this)">
-                                    {{ post.title | escape }}
-                                </a>
-                                {% if site.toc.enabled %}
-                                    {% if page.url == post.url %}
-                                        {% include toc.html html=content h_min=site.toc.h_min h_max=site.toc.h_max %}
-                                    {% endif %}
+                            {% if (page.url[/(\/.*?)(\/|$)/, 1] == "cn" && post.url[/(\/.*?)(\/|$)/, 1] == "cn") || (page.url[/(\/.*?)(\/|$)/, 1] != "cn" && post.url[/(\/.*?)(\/|$)/, 1] == "en") %}
+                                {% if page.url == post.url %}
+                                <li class="chapter active" data-level="1.2" data-path="{{site.baseurl}}{{post.url}}">
+                                {% else %}
+                                <li class="chapter" data-level="1.1" data-path="{{site.baseurl}}{{post.url}}">
                                 {% endif %}
-                            </li>
+                                    <a href="{{site.baseurl}}{{post.url}}" onclick="pageScrollToTop(this)">
+                                        {{ post.title | escape }}
+                                    </a>
+                                    {% if site.toc.enabled %}
+                                        {% if page.url == post.url %}
+                                            {% include toc.html html=content h_min=site.toc.h_min h_max=site.toc.h_max %}
+                                        {% endif %}
+                                    {% endif %}
+                                </li>
+                            {% endif %}
                         {% endfor %}
 
                         {% if reversed_posts.size > 0 %}
