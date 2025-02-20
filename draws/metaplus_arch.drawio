@@ -209,6 +209,9 @@
         <mxCell id="ad5ByYOurPwe1SDgpGm1-1" value="Rest API" style="text;html=1;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;rotation=0;fontFamily=Times New Roman;" vertex="1" parent="1">
           <mxGeometry x="522" y="490" width="60" height="27" as="geometry" />
         </mxCell>
+        <mxCell id="ad5ByYOurPwe1SDgpGm1-2" value="" style="shape=umlActor;verticalLabelPosition=bottom;verticalAlign=top;html=1;outlineConnect=0;fontFamily=Times New Roman;" vertex="1" parent="1">
+          <mxGeometry x="660" y="402.01" width="20" height="42.01" as="geometry" />
+        </mxCell>
       </root>
     </mxGraphModel>
   </diagram>
