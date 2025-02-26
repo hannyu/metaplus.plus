@@ -8,6 +8,14 @@ require(['gitbook', 'jquery'], function(gitbook, $) {
                 window.open('http://www.facebook.com/sharer/sharer.php?s=100&p[url]='+encodeURIComponent(location.href));
             }
         },
+        'weixin': {
+            'label': 'Weixin',
+            'icon': 'fa fa-weixin',
+            'onClick': function(e) {
+                e.preventDefault();
+                window.open('weixin://dl/add?hannyu');
+            }
+        },
         'twitter': {
             'label': 'Twitter',
             'icon': 'fa fa-twitter',
@@ -63,14 +71,6 @@ require(['gitbook', 'jquery'], function(gitbook, $) {
                 e.preventDefault();
                 window.open('http://vkontakte.ru/share.php?url='+encodeURIComponent(location.href));
             }
-        },
-        'weixin': {
-            'label': 'Weixin',
-            'icon': 'fa fa-weixin',
-            'onClick': function(e) {
-                e.preventDefault();
-                window.open('weixin://dl/add?hannyu');
-            }
         }
     };
 
@@ -101,9 +101,7 @@ require(['gitbook', 'jquery'], function(gitbook, $) {
 
         // Direct actions to share
         $.each(SITES, function(sideId, site) {
-            console.log("wwwwwwww");
             if (!opts[sideId]) return;
-            console.log("hhhhhhhh");
 
             var onClick = site.onClick;
             

@@ -1,6 +1,6 @@
 # Configurations
-title:            BadGood~ Metaplus
-longtitle:        
+title:            Metaplus
+longtitle:        Metaplus - A plus replica of metadata
 author:           hannyu
 email:            hannyu@gmail.com
 description: >
@@ -64,8 +64,8 @@ collections:
     permalink: /:path
 
 ordered_collections:
-  - posts
   - pages
+  - posts
   - others
 
 page_width: 800px

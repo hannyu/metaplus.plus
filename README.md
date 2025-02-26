@@ -1,6 +1,6 @@
 ---
 layout: home
-title: Jekyll Gitbook Theme
+title: Metaplus - A plus replica of universal metadata
 permalink: /
 ---
 
